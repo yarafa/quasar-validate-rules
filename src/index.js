@@ -8,12 +8,16 @@
 
 function extendConf(conf) {
   // make sure my-ext boot file is registered
-  conf.boot.push("~quasar-validate-rules/src/boot/rules.js");
+  conf.boot.push(
+    "~quasar-app-extension-quasar-validate-rules/src/boot/rules.js"
+  );
 
   // make sure boot & component files get transpiled
   if (conf.build.transpileDependencies !== undefined) {
     // quasar/app-vite does not have transpileDependencies
-    conf.build.transpileDependencies.push(/quasar-validate-rules[\\/]src/);
+    conf.build.transpileDependencies.push(
+      /quasar-app-extension-quasar-validate-rules[\\/]src/
+    );
   }
 }
 
