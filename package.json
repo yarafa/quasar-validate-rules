@@ -1,0 +1,22 @@
+{
+  "name": "quasar-app-extension-quasar-validate-rules",
+  "version": "0.0.1",
+  "description": "quasar-validate-rules",
+  "author": "yarafa",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yarafa/quasar-validate-rules.git"
+  },
+  "bugs": "",
+  "homepage": "https://github.com/yarafa/",
+  "engines": {
+    "node": ">= 12.2.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  }
+}
