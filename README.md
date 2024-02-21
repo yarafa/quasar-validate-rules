@@ -27,3 +27,9 @@ quasar ext remove quasar-validate-rules
 # Other Info
 
 > Add other information that's not as important to know
+
+# Publish to NPM
+
+```bash
+npm publish
+```

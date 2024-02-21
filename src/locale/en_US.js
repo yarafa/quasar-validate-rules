@@ -11,5 +11,6 @@ export const message = {
   email: "Please enter a valid email address",
   ipAddress: "Please enter a valid IP address",
   macAddress: "Please enter a valid MAC address",
-  macAddress: "Please enter a valid URL",
+  url: "Please enter a valid URL",
+  date: "Please enter a valid date",
 };

@@ -12,4 +12,5 @@ export const message = {
   ipAddress: "请输入有效的IP地址",
   macAddress: "请输入有效的MAC地址",
   url: "请输入有效的网址",
+  date: "请输入有效的日期",
 };

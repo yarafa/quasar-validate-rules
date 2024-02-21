@@ -1,5 +1,6 @@
 import * as methods from "@vuelidate/validators";
 import { getDefaultMessage } from "../locale";
+import { isDate } from "./date";
 
 export default ({ app }) => {
   app.config.globalProperties.$rules = {
@@ -92,7 +93,7 @@ export default ({ app }) => {
     numeric(message = false) {
       return (val) =>
         methods.numeric.$validator(val) ||
-        messag ||
+        message ||
         getDefaultMessage("numeric", app.config.globalProperties.$locale);
     },
     integer(message = false) {
@@ -130,6 +131,12 @@ export default ({ app }) => {
         methods.url.$validator(val) ||
         message ||
         getDefaultMessage("url", app.config.globalProperties.$locale);
+    },
+    date(message = false) {
+      return (val) =>
+        isDate(val) ||
+        message ||
+        getDefaultMessage("date", app.config.globalProperties.$locale);
     },
     or(...args) {
       let message = false;
