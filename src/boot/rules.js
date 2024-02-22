@@ -110,12 +110,14 @@ export default ({ app }) => {
     },
     email(message = false) {
       return (val) =>
+        !val ||
         methods.email.$validator(val) ||
-        messag ||
+        message ||
         getDefaultMessage("email", app.config.globalProperties.$locale);
     },
     ipAddress(message = false) {
       return (val) =>
+        !val ||
         methods.ipAddress.$validator(val) ||
         message ||
         getDefaultMessage("ipAddress", app.config.globalProperties.$locale);
@@ -128,12 +130,14 @@ export default ({ app }) => {
     },
     url(message = false) {
       return (val) =>
+        !val ||
         methods.url.$validator(val) ||
         message ||
         getDefaultMessage("url", app.config.globalProperties.$locale);
     },
     date(message = false) {
       return (val) =>
+        !val ||
         isDate(val) ||
         message ||
         getDefaultMessage("date", app.config.globalProperties.$locale);
