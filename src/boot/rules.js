@@ -1,6 +1,6 @@
 import * as methods from "@vuelidate/validators";
 import { getDefaultMessage } from "../locale";
-import { isDate } from "./date";
+import { isDate, isDatetime, isIdNumber, isCellphone } from "./extend";
 
 export default ({ app }) => {
   app.config.globalProperties.$rules = {
@@ -141,6 +141,27 @@ export default ({ app }) => {
         isDate(val) ||
         message ||
         getDefaultMessage("date", app.config.globalProperties.$locale);
+    },
+    dateTime(message = false) {
+      return (val) =>
+        !val ||
+        isDatetime(val) ||
+        message ||
+        getDefaultMessage("datetime", app.config.globalProperties.$locale);
+    },
+    idNumber(message = false) {
+      return (val) =>
+        !val ||
+        isIdNumber(val) ||
+        message ||
+        getDefaultMessage("idNumber", app.config.globalProperties.$locale);
+    },
+    cellphone(message = false) {
+      return (val) =>
+        !val ||
+        isCellphone(val) ||
+        message ||
+        getDefaultMessage("cellphone", app.config.globalProperties.$locale);
     },
     or(...args) {
       let message = false;

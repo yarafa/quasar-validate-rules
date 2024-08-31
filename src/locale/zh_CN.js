@@ -13,4 +13,7 @@ export const message = {
   macAddress: "请输入有效的MAC地址",
   url: "请输入有效的网址",
   date: "请输入有效的日期",
+  datetime: "请输入有效的日期时间",
+  idNumber: "请输入有效的身份证号",
+  cellphone: "请输入有效的手机号",
 };

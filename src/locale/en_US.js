@@ -13,4 +13,7 @@ export const message = {
   macAddress: "Please enter a valid MAC address",
   url: "Please enter a valid URL",
   date: "Please enter a valid date",
+  datetime: "Please enter a valid date and time",
+  idNumber: "Please enter a valid ID number",
+  cellphone: "Please enter a valid cellphone number",
 };
