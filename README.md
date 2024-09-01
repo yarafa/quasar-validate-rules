@@ -30,19 +30,27 @@ quasar ext remove quasar-validate-rules
 
 # Publish to NPM
 
-> Before publishing, change to the official source using the following command:
+> 1. Before publishing, change to the official source using the following command:
 
 ```bash
 npm config set registry=https://registry.npmjs.org
 ```
 
-> Then use the following command to publish:
+> 2. Then use the following command to publish:
 
 ```bash
 npm publish
 ```
 
-> Remember to switch the npm registry back to the Taobao source after publishing:
+> 3. If an error with `code ENEEDAUTH` encountered when executing publish, you need to perform a login operation first using the following command:
+
+```bash
+npm login
+```
+
+> 4. Then follow the prompts to enter the corresponding information, and execute the publish operation after logging in.
+
+> 5. Remember to switch the npm registry back to the Taobao source after publishing:
 
 ```bash
 npm config set registry=https://registry.npmmirror.com
