@@ -30,6 +30,20 @@ quasar ext remove quasar-validate-rules
 
 # Publish to NPM
 
+> Before publishing, change to the official source using the following command:
+
+```bash
+npm config set registry=https://registry.npmjs.org
+```
+
+> Then use the following command to publish:
+
 ```bash
 npm publish
+```
+
+> Remember to switch the npm registry back to the Taobao source after publishing:
+
+```bash
+npm config set registry=https://registry.npmmirror.com
 ```
