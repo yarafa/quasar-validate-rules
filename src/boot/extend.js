@@ -31,7 +31,7 @@ export function isDatetime(value) {
     /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})(?::(\d{2}))?$/;
 
   // 使用正则表达式匹配字符串
-  const match = dateStr.match(dateTimeRegex);
+  const match = value.match(dateTimeRegex);
   if (!match) {
     return false;
   }
