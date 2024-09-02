@@ -142,7 +142,7 @@ export default ({ app }) => {
         message ||
         getDefaultMessage("date", app.config.globalProperties.$locale);
     },
-    dateTime(message = false) {
+    datetime(message = false) {
       return (val) =>
         !val ||
         isDatetime(val) ||
