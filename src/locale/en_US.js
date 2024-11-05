@@ -16,4 +16,5 @@ export const message = {
   datetime: "Please enter a valid date and time",
   idNumber: "Please enter a valid ID number",
   cellphone: "Please enter a valid cellphone number",
+  lpr: "Please enter a valid license plate number",
 };

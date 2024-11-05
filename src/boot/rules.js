@@ -1,6 +1,6 @@
 import * as methods from "@vuelidate/validators";
 import { getDefaultMessage } from "../locale";
-import { isDate, isDatetime, isIdNumber, isCellphone } from "./extend";
+import { isDate, isDatetime, isIdNumber, isCellphone, isLPR } from "./extend";
 
 export default ({ app }) => {
   app.config.globalProperties.$rules = {
@@ -160,6 +160,13 @@ export default ({ app }) => {
       return (val) =>
         !val ||
         isCellphone(val) ||
+        message ||
+        getDefaultMessage("cellphone", app.config.globalProperties.$locale);
+    },
+    lpr(message = false) {
+      return (val) =>
+        !val ||
+        isLPR(val) ||
         message ||
         getDefaultMessage("cellphone", app.config.globalProperties.$locale);
     },

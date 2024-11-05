@@ -141,3 +141,14 @@ export function isCellphone(value) {
     return true;
   }
 }
+
+export function isLPR(value) {
+  // 这条正则可以校验 普通汽车的车牌、新能源客（货）车车牌
+  const reg =
+    /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-HJ-NP-Z][A-HJ-NP-Z0-9]{4,5}[A-HJ-NP-Z0-9挂学警港澳]$/; //普通车牌 | 新能源货车 | 新能源小客车 车牌校验规则;
+  if (!reg.test(value)) {
+    return false;
+  } else {
+    return true;
+  }
+}

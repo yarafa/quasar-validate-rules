@@ -16,4 +16,5 @@ export const message = {
   datetime: "请输入有效的日期时间",
   idNumber: "请输入有效的身份证号",
   cellphone: "请输入有效的手机号",
+  lpr: "请输入有效的车牌号",
 };
