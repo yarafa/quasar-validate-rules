@@ -168,7 +168,7 @@ export default ({ app }) => {
         !val ||
         isLPR(val) ||
         message ||
-        getDefaultMessage("cellphone", app.config.globalProperties.$locale);
+        getDefaultMessage("lpr", app.config.globalProperties.$locale);
     },
     or(...args) {
       let message = false;
